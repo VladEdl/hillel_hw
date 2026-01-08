@@ -1,0 +1,23 @@
+.container {
+    padding: 50px;
+}
+
+.cards {
+    display: flex;
+    gap: 30px;
+}
+
+.card {
+    height: 180px;
+    width: 300px;
+    border: 1px solid black;
+}
+
+.more-text {
+    display: none;
+}
+
+.card.expanded .more-text {
+    display: inline;
+}
+
