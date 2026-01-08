@@ -1,0 +1,26 @@
+.container {
+    padding: 25px;
+}
+
+li {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.selected {
+    background-color: #e0ffd4;
+    opacity: 0.7;
+}
