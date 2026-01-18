@@ -1,0 +1,73 @@
+body {
+    background: #ccc;
+}
+
+.container {
+    padding: 20px;
+}
+
+.inputForm{
+    margin-bottom: 20px;
+
+}
+
+label{
+    display: inline-block;
+    width: 100px;
+}
+
+.checkboxForm label {
+    width: auto;
+    margin-left: 10px;
+}
+
+
+.checkboxForm {
+    align-items: center;
+}
+
+.error input {
+    border: 1px red solid;
+}
+
+.error select {
+    border: 1px red solid;
+}
+
+.errorCheckbox label {
+    border: 1px red solid;
+}
+
+.listForm {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.listForm li {
+    border: 1px solid black;
+    width: 300px;
+}
+
+.hidden {
+    display: none;
+}
+
+.input-control.error input,
+.input-control.error select {
+    border-color: #ff3860;
+}
+
+.input-control .error-message {
+    color: #ff3860;
+    font-size: 12px;
+    height: 14px;
+    visibility: hidden;
+}
+
+.input-control.error .error-message {
+    visibility: visible;
+}
+
+

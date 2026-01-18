@@ -2,9 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Registration Form</title>
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<script src="js/myFlat.js"></script>
+<form>
+    <div class="container">
+
+        <div class="inputForm input-control">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email">
+            <div class="error-message"></div> </div>
+
+        <div class="inputForm input-control">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password">
+            <div class="error-message"></div>
+        </div>
+
+        <div class="inputForm input-control">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" placeholder="Confirm your password">
+            <div class="error-message"></div>
+        </div>
+
+        <div class="inputForm input-control">
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Enter your age">
+            <div class="error-message"></div>
+        </div>
+
+        <div class="inputForm input-control">
+            <label for="city">City:</label>
+            <select id="city">
+                <option value="" disabled selected>Choose city</option>
+                <option value="kyiv">Київ</option>
+                <option value="lviv">Львів</option>
+                <option value="kharkiv">Харків</option>
+                <option value="odesa">Одеса</option>
+                <option value="other">Інше</option>
+            </select>
+            <div class="error-message"></div>
+        </div>
+
+        <div class="inputForm checkboxForm input-control">
+            <input type="checkbox" id="privacyPolicy">
+            <label for="privacyPolicy" id="labelForPrivacy">Do you agree to Privacy Policy?</label>
+            <div class="error-message"></div>
+        </div>
+
+        <div class="inputForm buttons">
+            <button type="submit" id="submitBtn">Register</button>
+            <button type="reset" id="resetBtn">Reset</button>
+        </div>
+
+    </div>
+</form>
+
+<div class="finalForm hidden" id="finalForm">
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
