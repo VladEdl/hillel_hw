@@ -5,6 +5,27 @@
     <title>Title</title>
 </head>
 <body>
-<script src="js/myFlat.js"></script>
+<div class="container">
+    <div class="form-section">
+        <input type="text" id="firstName" placeholder="First Name">
+        <input type="text" id="lastName" placeholder="Last Name">
+        <input type="email" id="email" placeholder="Email">
+
+        <div class="actions">
+            <button id="saveBtn">Save</button>
+            <button id="freezeBtn">Freeze Model</button>
+        </div>
+
+        <div id="errorBox" class="error-box"></div>
+    </div>
+
+    <div class="preview-card" id="previewCard">
+        <h3>Profile Preview</h3>
+        <p><strong>Full Name:</strong> <span id="viewFullName">-</span></p>
+        <p><strong>Email:</strong> <span id="viewEmail">-</span></p>
+        <p><small>Last updated: <span id="lastUpdated">-</span></small></p>
+    </div>
+</div>
+<script src="js/script.js"></script>
 </body>
 </html>
