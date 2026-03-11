@@ -1,14 +1,65 @@
 # HILLEL_HW
-## Реализовать функцию flat
-Ваша функція має повторювати базовий функціонал методу flat, але з деякими доопрацюваннями.
+## Керований об’єкт UserCard (Descriptors + Getter/Setter)
+### Мета
 
-1. Функція приймає лише 1 аргумент - масив,
+Закріпити Object.defineProperty, прапорці writable/enumerable/configurable, getter/setter, freeze/seal.
 
-2. Функція повертає лише одновимірний масив 
-      - Якщо користувач передає більше одного аргументу, викидати помилку в консоль
-   
-            throw new Error('Function accepts only 1 argument, too much arguments provided');
-      - Якщо в функцію передали багатомірний масив, то вона повинна повернути новий одномірний масив.  
-      - Якщо в функцію передали одновимірний масив, то вона повинна повернути новий масив, що є повною копією переданого.
+### Завдання
 
-### P.S використання методу flat заборонено
+Створіть об’єкт user із полями:
+
+_firstName (службове поле)
+
+_lastName (службове поле)
+
+createdAt (дата створення, тільки для читання)
+
+Додайте accessor-властивість fullName:
+
+getter повертає "First Last"
+
+setter приймає рядок "First Last" і:
+
+перевіряє, що це string
+
+перевіряє, що є 2 слова
+
+кожне слово мінімум 2 символи
+
+якщо невалідно — кидає Error
+
+Через дескриптори налаштуйте:
+
+_firstName, _lastName: enumerable: false
+
+createdAt: writable: false, configurable: false
+
+fullName: configurable: false, enumerable: true
+
+Додайте метод lockProfile():
+
+після виклику об’єкт має стати sealed
+
+перевірте через Object.isSealed(user)
+
+Виведіть у консоль:
+
+дескриптори всіх полів (Object.getOwnPropertyDescriptors)
+
+результат спроби:
+
+додати нове поле після lockProfile
+
+змінити createdAt
+
+видалити fullName
+
+Критерії приймання
+
+fullName коректно працює в обидва боки (get/set).
+
+Службові поля не потрапляють у Object.keys(user).
+
+createdAt не змінюється.
+
+Після lockProfile нові поля не додаються, існуючі не видаляються.
