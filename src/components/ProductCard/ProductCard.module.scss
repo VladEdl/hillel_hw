@@ -1,0 +1,27 @@
+.card {
+  transition: transform 0.2s;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.imageWrapper {
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+
+  img {
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.inactive {
+  opacity: 0.6;
+  filter: grayscale(1);
+}

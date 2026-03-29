@@ -1,14 +1,16 @@
-# HILLEL_HW
-## Реализовать функцию flat
-Ваша функція має повторювати базовий функціонал методу flat, але з деякими доопрацюваннями.
+# React + Vite
 
-1. Функція приймає лише 1 аргумент - масив,
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-2. Функція повертає лише одновимірний масив 
-      - Якщо користувач передає більше одного аргументу, викидати помилку в консоль
-   
-            throw new Error('Function accepts only 1 argument, too much arguments provided');
-      - Якщо в функцію передали багатомірний масив, то вона повинна повернути новий одномірний масив.  
-      - Якщо в функцію передали одновимірний масив, то вона повинна повернути новий масив, що є повною копією переданого.
+Currently, two official plugins are available:
 
-### P.S використання методу flat заборонено
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
